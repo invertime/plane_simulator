@@ -1,5 +1,8 @@
-#ifndef POINT_H
-#define POINT_H 
+#ifndef RigidBody_H
+#define RigidBody_H 
+
+#include "Vector3f.hpp"
+#include "Matrix3f.hpp"
 
 class RigidBody {
 public:
