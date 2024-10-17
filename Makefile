@@ -14,7 +14,7 @@ OBJ_FILES:=$(addprefix $(BUILD), $(OBJECTS))
 
 # Define the default target
 all: $(OBJ_FILES)
-	$(CC) $(BUILD_FLAGS) $(LIB) $^ -o bin/runner
+	$(CC) $^ $(BUILD_FLAGS) $(LIB) -o bin/runner
 
 # Rules for building individual object files
 $(BUILD)main.o: $(SRC)main.cpp $(SRC_CLASSES)RigidBody.hpp $(SRC_CLASSES)Matrix3f.hpp $(SRC_CLASSES)Vector3f.hpp
