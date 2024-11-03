@@ -1,5 +1,4 @@
-#ifndef Matrix3f_H
-#define Matrix3f_H
+#pragma once
 
 #include "Vector3f.hpp"
 
@@ -16,4 +15,4 @@ class Matrix3f
 
 Vector3f operator*(const Matrix3f m, Vector3f v);
 
-#endif // !Matrix3f_C
+Matrix3f diagMat(Vector3f v);

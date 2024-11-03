@@ -1,4 +1,5 @@
 #include "Matrix3f.hpp"
+#include "Vector3f.hpp"
 
 Matrix3f::Matrix3f(): x(Vector3f(0,0,0)), y(Vector3f(0,0,0)), z(Vector3f(0,0,0)) {};
 
@@ -17,4 +18,8 @@ Vector3f operator*(const Matrix3f m, Vector3f v)
         m.x.y*v.x + m.y.y*v.y + m.z.y*v.z,
         m.x.z*v.x + m.y.z*v.y + m.z.z*v.z
     };
+}
+
+Matrix3f diagMat(Vector3f v){
+    return Matrix3f(Vector3f(v.x, 0.0f, 0.0f), Vector3f(0.0f, v.y, 0.0f), Vector3f(0.0f, 0.0f, v.z));
 }
